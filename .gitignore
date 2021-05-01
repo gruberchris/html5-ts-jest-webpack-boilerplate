@@ -1,0 +1,10 @@
+node_modules
+public
+coverage
+
+# common editors
+.idea
+.vscode
+
+# MacOS
+.DS_Store
