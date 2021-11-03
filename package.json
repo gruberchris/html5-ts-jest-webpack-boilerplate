@@ -4,9 +4,8 @@
   "description": "HTML5 web page with TypeScript, Jest and Webpack boilerplate",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve",
-    "watch": "webpack --watch",
+    "build": "webpack --mode=production",
+    "start": "webpack serve --open",
     "test": "jest"
   },
   "author": "Chris Gruber",

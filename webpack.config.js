@@ -19,23 +19,19 @@ module.exports = {
 			{
 				test: /\.css$/,
 				exclude: /node_modules/,
-				use: [
-					'style-loader',
-					'css-loader'
-				]
+				use: ['style-loader', 'css-loader']
 			},
 			{
 				test: /\.mp3$/,
 				exclude: /node_modules/,
-				use: [
-					{ loader: 'file-loader' }
-				]
+				use: [{ loader: 'file-loader' }]
 			}
         ]
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        clean: true
     },
     plugins: [
         new HtmlWebpackPlugin({
