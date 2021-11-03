@@ -2,9 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
     devServer: {
-        publicPath: '/',
-        contentBase: './dist',
+        static: './dist',
         hot: true
     },
     devtool: 'inline-source-map',
@@ -14,7 +14,7 @@ module.exports = {
             {
                 test: /\.ts$/,
                 use: 'ts-loader',
-                include: [path.resolve(__dirname, 'src/app')]
+                exclude: /node_modules/
             },
 			{
 				test: /\.css$/,
@@ -43,6 +43,6 @@ module.exports = {
         })
     ],
     resolve: {
-		extensions: ['.ts', '.js']
+		extensions: ['.ts', '.tsx', '.js']
 	}
 }
